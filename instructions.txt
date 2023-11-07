@@ -1,0 +1,12 @@
+Follow the instructions below to configure:
+1.	Navigate  here for the script and open in VSCode or Powershell ISE
+2.	Follow the instructions in the script then run 
+3.	Enable share level permissions
+a.	Navigate to your file share
+b.	Select the actual share
+c.	Select “Configured” next to Active Directory under the properties tab
+d.	Under Step 2 where it says Default Share Level Permissions select the radio button for “Enable for all authenticated users and groups”
+e.	Click Save
+4.	Mount the Share using this command net use Z: \\<YourStorageAccountName>.file.core.windows.net\<FileShareName> /user:localhost\<YourStorageAccountName> <YourStorageAccountKey> from an admin session
+5.	Configure your ACLs
+6.	Mount the drive using the provided mounting script for Active Directory in a Non Admin session. 
